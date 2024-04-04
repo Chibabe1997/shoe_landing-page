@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    font-family: "Figtree", sans-serif;
+    line-height: 1.6;
+}
+img{
+    width: 200px;
+    height: 200px;
+    /* min-width: 100%; */
+    display: block;
+    background: transparent;
+}
+h1
+h2
+h3
+p {
+   margin: 0; 
+}
+.container {
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+}
+.split {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.split > * {
+    flex-basis: 30%;
+    min-width: 15em;
+}
+.spacing >*+* {
+    margin-top: var(--spacer, 2rem);
+}
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-text,#fff);
+    font-weight: 700;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    background: var(--clr-accent,blue);
+    border-radius: .25em;
+    padding: .5em 1.25em;
+    transition: 
+    transform 250ms ease-in-out;
+    opacity: 250ms linear;
+}
+.btn:hover,
+.btn:focus {
+   transform: scale(1.1);
+   opacity: .5;
+}
+.primary-title {
+    font-size: 4rem;
+    line-height: 1;
+    text-transform: uppercase;
+}
+section{
+    padding: 7em 0;
+}
+.section-title {
+     font-size: 3.5rem;
+     text-align: center; 
+     line-height: 1;  
+     color: #17353d;
+     margin-bottom: 4rem;
+}
+.hero {
+    color: #fff;
+    text-align: center;
+    padding: 15em 0;
+    background: #222;
+    background-blend-mode: multiply;
+    background: url(./assets/images/sne\ 2.png),radial-gradient(#444, #111);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.featured-item{
+    background: white;
+    display: block;
+    position: relative;
+    transform: scale(.85);
+    transition: transform 250ms ease-in-out;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+}
+.featured-item:hover {
+    color: red;
+    transform: scale(1);
+}
+
+
+.featured-item:focus{
+    transform: scale(1);
+    opacity: 1;
+}
+.featured-item::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    padding: 60% 60% 0 0;
+    border-radius: 50%;
+    background: #2193b0;
+    z-index: -1;
+    /* margin-right: 250px; */
+    
+}
+span {
+    display: block;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.featured-details {
+    opacity: 0;
+    transition: opacity 250ms linear;
+    text-shadow: 0 0 .25em wheat;
+}
+.product {
+    background: radial-gradient(var(--clr-inner,limegreen ),var(--clr-outer, purple));
+    padding: 3em;
+    border-radius: 1em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+.product_title {
+    font-size: 4rem;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 0 .2em;
+    text-transform: uppercase;
+}
+.shoe-ash {
+    --clr-inner: #faa700;
+    --clr-outer: #e48d00;
+    --clr-accent: #a1173c;
+}
+.shoe-green {
+    --clr-inner: #fce4b3;
+    --clr-outer: #eac886;
+    --clr-accent: #2f4858;
+}
+.shoe-black {
+    --clr-inner:#6dd5ed;
+    --clr-outer: #2193b0;
+    --clr-accent: #008951;
+}
+.hero {
+    --clr-accent: #faa700;
+}
+.product_image {
+    margin: -5em 0 0 0;
+}
+@media (min-width:45em) {
+    .product_image {
+        float: right;
+        width: 50%;
+        text-align: left;
+        /* outline: 2px solid red; */
+        shape-outside:url(./assets/images/sne_4-removebg-preview.png);
+        margin: 0 -5em 0 0;
+        shape-margin: 1em;
+
+
+    }
+    .product_title {
+        margin: 0;
+    }
+}
